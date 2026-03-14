@@ -124,3 +124,83 @@ footer {
     text-align: center;
     padding: 15px;
 }
+/* Main layout - Two Column Grid */
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    /* Column 1 is for Web Resources, Column 2 is for Personal Info */
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Ensure your name spans across both columns */
+main h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Position the Web Resources card in the first column */
+main>section:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+/* Position About Me and Interests in the second column */
+main>section:nth-of-type(1),
+main>section:nth-of-type(2) {
+    grid-column: 2;
+}
+
+/* Content Layout for About Me (Image on Right) */
+.about-me {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-me p {
+    flex: 1;
+}
+
+.about-me img {
+    width: 150px;
+    height: auto;
+    order: 2;
+    /* Moves image to the right side of the text */
+}
+
+/* Content Layout for Namibia (Image on Left) */
+.Namibia {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.Namibia img {
+    width: 150px;
+    height: auto;
+}
+
+.Namibia p {
+    flex: 1;
+}
+
+/* Web Resources List Styling */
+.web-resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.web-resources li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.web-resources a {
+    color: #003366;
+    text-decoration: none;
+}
