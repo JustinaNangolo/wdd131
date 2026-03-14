@@ -32,20 +32,34 @@ header {
     font-weight: bold;
 }
 
-/* Navigation */
-nav {
-    margin-top: 10px;
+/* Target the unordered list to align items in a row */
+nav ul {
+    display: flex;
+    justify-content: center;
+    /* Centers the links horizontally */
+    list-style: none;
+    /* Removes the bullet points */
+    padding: 0;
+    margin: 10px 0 0 0;
+    gap: 20px;
+    /* Adds space between the links */
 }
 
+/* Style the links */
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
     font-weight: bold;
+    padding: 5px 10px;
+    transition: 0.3s;
+    /* Smooth hover effect */
 }
 
+/* Required hover effect */
 nav a:hover {
-    text-decoration: underline;
+    background-color: white;
+    color: #003366;
+    border-radius: 4px;
 }
 
 
