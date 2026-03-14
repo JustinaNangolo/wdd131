@@ -62,61 +62,6 @@ nav a:hover {
     border-radius: 4px;
 }
 
-
-/* Main layout */
-main {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* Main heading */
-main h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-/* Card Container */
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Ensure the heading stays on top across the full width */
-.card h2 {
-    border-bottom: 1px solid #eee;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    width: 100%;
-}
-
-/* Flex container for the stuff below the heading */
-.card-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-/* Image styling */
-.card img {
-    width: 150px;
-    height: auto;
-    border-radius: 5px;
-}
-
-/* Card 1: Force image to the right (if it's not already there in HTML) */
-.card-content p {
-    flex: 1;
-}
-
-/* Card 2: This class ensures the image stays on the left */
-.img-left {
-    flex-direction: row;
-    /* Default, but explicit for clarity */
-}
-
 /* Footer */
 footer {
     background-color: #003366;
