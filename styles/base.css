@@ -69,83 +69,69 @@ footer {
     text-align: center;
     padding: 15px;
 }
-/* Main layout - Two Column Grid */
+
+
+/* Main Layout - Two Column Grid */
 main {
     max-width: 1000px;
     margin: auto;
     padding: 20px;
     display: grid;
-    /* Column 1 is for Web Resources, Column 2 is for Personal Info */
-    grid-template-columns: 300px 1fr;
+    /* Column 1 (Left) is wider for personal info, Column 2 (Right) is for resources */
+    grid-template-columns: 1fr 300px;
     gap: 30px;
     align-items: start;
 }
 
-/* Ensure your name spans across both columns */
+/* Ensure your name spans across both columns at the top */
 main h1 {
     grid-column: 1 / -1;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Position the Web Resources card in the first column */
-main>section:nth-of-type(3) {
+/* Position About Me and Interests in the Left Column */
+.card:has(.about-me),
+.card:has(.Namibia) {
     grid-column: 1;
+}
+
+/* Position Web Resources in the Right Column */
+.card:has(.web-resources) {
+    grid-column: 2;
+    /* If you want it to start at the top next to About Me: */
     grid-row: 2;
 }
 
-/* Position About Me and Interests in the second column */
-main>section:nth-of-type(1),
-main>section:nth-of-type(2) {
-    grid-column: 2;
-}
+/* --- Content internal layouts (Keeping your style) --- */
 
-/* Content Layout for About Me (Image on Right) */
-.about-me {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.about-me p {
-    flex: 1;
-}
-
-.about-me img {
-    width: 150px;
-    height: auto;
-    order: 2;
-    /* Moves image to the right side of the text */
-}
-
-/* Content Layout for Namibia (Image on Left) */
+.about-me,
 .Namibia {
     display: flex;
     align-items: center;
     gap: 20px;
+    padding: 15px;
 }
 
+/* Image on Right for About Me */
+.about-me img {
+    width: 150px;
+    height: auto;
+    order: 2;
+}
+
+/* Image on Left for Namibia */
 .Namibia img {
     width: 150px;
     height: auto;
 }
 
+.about-me p,
 .Namibia p {
     flex: 1;
 }
 
-/* Web Resources List Styling */
 .web-resources ul {
     list-style: none;
-    padding: 0;
-}
-
-.web-resources li {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.web-resources a {
-    color: #003366;
-    text-decoration: none;
+    padding: 15px;
 }
