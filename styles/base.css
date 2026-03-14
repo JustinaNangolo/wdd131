@@ -1,0 +1,84 @@
+/* Reset basic spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: "Iosevka Charon Mono", monospace;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+h1{
+    font-weight: 300;
+}
+
+/* Header styling */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Course title */
+#course-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main layout */
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Main heading */
+main h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Card sections */
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Images inside cards */
+.card img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
