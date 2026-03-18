@@ -5,10 +5,18 @@ document.getElementById("currentyear").textContent = currentYear;
 // Dynamically set the last modified date
 document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
 
-const hamButton = document.querySelector("#menu");
-const navigation = document.querySelector(".navigation");
+// Hamburger menu
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
 
-hamButton.addEventListener("click", () => {
-    navigation.classList.toggle("open");
-    hamButton.classList.toggle("open");
+menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+
+    // Change icon
+    if (navMenu.classList.contains("open")) {
+        menuBtn.textContent = "✖";
+    } else {
+        menuBtn.textContent = "☰";
+    }
 });
+

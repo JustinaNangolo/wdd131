@@ -1,17 +1,91 @@
 body {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
-header, main, footer {
-    padding: 20px;
-    text-align: center;
-    background-color: beige;
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
-main {
-    background-color: beige;
+/* Hamburger */
+#menuBtn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navigation */
+nav {
+    display: none;
+}
+
+nav ul {
+    display: flex;             
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    padding: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
 }
 
 nav a:hover {
-    color: red;
+    color: yellow;
+    text-decoration: underline;
+}
+
+/* Show menu when active */
+nav.open {
+    display: block;
+}
+
+/* Main layout */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* GRID (important requirement) */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+figure {
+    background: beige;
+    padding: 10px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
 }

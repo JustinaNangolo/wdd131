@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temples</title>
+    <title>Temple Album</title>
     <link rel="stylesheet" href="temples.css">
     <link rel="stylesheet" href="temples-large.css">
     <script src="temples.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <header>
         <h1>Temple Album</h1>
+        <button id="menuBtn">☰</button>
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
@@ -26,48 +27,52 @@
         </nav>
     </header>
     <main>
-        <h1>Temples</h1>
-        <figure>
-            <img src="temple1.jpg" alt="Ancient Temple">
-            <figcaption>Ancient Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="temple2.jpg" alt="Modern Temple">
-            <figcaption>Modern Temple</figcaption>
-        </figure>
-         <figure>
-            <img src="temple3.jpg" alt="Mountain Temple">
-            <figcaption>Mountain Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="temple4.jpg" alt="City Temple">
-            <figcaption>City Temple</figcaption>    
-        </figure>
-        <figure>
-            <img src="temple5.jpg" alt="Temple at Sunset">
-            <figcaption>Temple at Sunset</figcaption>
-        </figure>
-        <figure>
-            <img src="temple6.jpg" alt="Temple Interior">
-            <figcaption>Temple Interior</figcaption>
-        </figure>
-        <figure>
-            <img src="temple7.jpg" alt="Temple Courtyard">
-            <figcaption>Temple Courtyard</figcaption>
-        </figure>
+        <h1>Temples Album</h1>
+        <div class="gallery">
+            <figure>
+                <img src="images/temple.jpg" alt="Ancient Temple">
+                <figcaption>Ancient Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple.jpg" alt="Modern Temple">
+                <figcaption>Modern Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple.jpg" alt="Mountain Temple">
+                <figcaption>Mountain Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple.jpg" alt="City Temple">
+                <figcaption>City Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple.jpg" alt="Temple at Sunset">
+                <figcaption>Temple at Sunset</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple.jpg" alt="Temple Interior">
+                <figcaption>Temple Interior</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple.jpg" alt="Temple Courtyard">
+                <figcaption>Temple Courtyard</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/temple.jpg" alt="Temple Festival">
+                <figcaption>Temple Festival</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple.jpg" alt="Temple at Night">
+                <figcaption>Temple at Night</figcaption>
+            </figure>
 
-        <figure>
-            <img src="temple8.jpg" alt="Temple Festival">
-            <figcaption>Temple Festival</figcaption>        
-        </figure>
-        <figure>
-            <img src="temple9.jpg" alt="Temple at Night">
-            <figcaption>Temple at Night</figcaption>
-        </figure>
+        </div>
+        
     </main>
 
     <footer>
-        <p>&copy; <span id="currentyear"></span> Justina Nangolo, Namibia</p>
+        <p>&copy;<span id="currentyear"></span> Justina Nangolo, Namibia</p>
         <p id="lastModified"></p>
     </footer>
 
