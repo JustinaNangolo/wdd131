@@ -1,0 +1,17 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header, main, footer {
+    padding: 20px;
+    text-align: center;
+    background-color: beige;
+}
+
+main {
+    background-color: beige;
+}
+
+nav a:hover {
+    color: red;
+}
