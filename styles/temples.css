@@ -67,8 +67,8 @@ main {
 /* GRID (important requirement) */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     margin: 0 auto;
     max-width: 900px;
 }
