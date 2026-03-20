@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 
-/* Header */
+
 header {
     background-color: #333;
     color: white;
@@ -14,7 +14,7 @@ header {
 
 }
 
-/* Hamburger */
+
 #menuBtn {
     font-size: 2rem;
     background: none;
@@ -23,7 +23,7 @@ header {
     cursor: pointer;
 }
 
-/* Navigation */
+
 nav {
     display: none;
 }
@@ -52,26 +52,32 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Show menu when active */
+
 nav.open {
     display: block;
 }
 
-/* Main layout */
+
 main {
     max-width: 800px;
     margin: 0 auto;
     padding: 1rem;
 }
 
-/* GRID (important requirement) */
+main h2 {
+    text-align: center;
+}
+
+
 .gallery {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 0.5px;
+    place-items: center;
     margin: 0 auto;
     max-width: 900px;
 }
+
 
 figure {
     background: beige;
@@ -88,4 +94,5 @@ footer {
     background-color: #333;
     color: white;
     padding: 1rem;
+    text-align: center;
 }
