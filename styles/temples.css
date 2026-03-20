@@ -48,7 +48,7 @@ nav a {
 }
 
 nav a:hover {
-    color: yellow;
+    color:lightblue;
     text-decoration: underline;
 }
 
@@ -71,11 +71,10 @@ main h2 {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 0.5px;
-    place-items: center;
-    margin: 0 auto;
+    grid-template-columns: 1fr;
+    gap: 1px;
     max-width: 900px;
+    margin: 0 auto;
 }
 
 
