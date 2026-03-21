@@ -12,11 +12,11 @@ const navMenu = document.getElementById("navMenu");
 menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("open");
 
-    // Change icon
     if (navMenu.classList.contains("open")) {
         menuBtn.textContent = "✖";
     } else {
         menuBtn.textContent = "☰";
     }
 });
+
 
