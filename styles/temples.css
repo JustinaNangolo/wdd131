@@ -17,6 +17,12 @@ header {
 
 #menuBtn {
     font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
     background: none;
     border: none;
     color: white;
@@ -30,7 +36,7 @@ nav {
 
 nav ul {
     display: flex;             
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     gap: 1rem;
     list-style: none;
