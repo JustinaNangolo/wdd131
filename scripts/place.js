@@ -6,21 +6,24 @@ document.getElementById("currentyear").textContent = currentYear;
 document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
 
 
-const temperature = 10; 
-const windSpeed = 5;    
+// 2. Wind Chill Logic
+const temp = 10; // Static value for now
+const wind = 5;  // Static value for now
 
-
-
-function calculateWindChill(temp, wind) {
-    return 13.12 + 0.6215 * temp - 11.37 * wind ** 0.16 + 0.3965 * temp * wind ** 0.16;
+function calculateWindChill(t, w) {
+    // Metric Formula: 13.12 + 0.6215T - 11.37(V^0.16) + 0.3965T(V^0.16)
+    return (13.12 + 0.6215 * t - 11.37 * Math.pow(w, 0.16) + 0.3965 * t * Math.pow(w, 0.16)).toFixed(1);
 }
 
+// Check conditions and display
+const displayWindChill = () => {
+    const wcElement = document.getElementById("windChill");
+    if (temp <= 10 && wind > 4.8) {
+        wcElement.textContent = `${calculateWindChill(temp, wind)} °C`;
+    } else {
+        wcElement.textContent = "N/A";
+    }
+};
 
-
-let windChill = "N/A";
-
-if (temperature <= 10 && windSpeed > 4.8) {
-    windChill = calculateWindChill(temperature, windSpeed).toFixed(1);
-}
-
-document.getElementById("windChill").textContent = windChill + " °C";
+// Run on load
+displayWindChill();
