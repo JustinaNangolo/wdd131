@@ -87,9 +87,11 @@ section {
 
 /* Weather Icon (mobile) */
 .weather-icon {
-    width: 70px;
-    margin: 0.5rem 0;
+    width: 100px;
+    margin: 0 auto;
+    height: auto;
     padding: 0.5rem 1rem;
+    display: block;
 }
 
 /* =========================
