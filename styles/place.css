@@ -131,7 +131,16 @@ footer p {
         width: 48%;
         vertical-align: top;
         background: var(--gray);
-        border-radius: 8px;
+        border: none;
+    }
+
+    .data h2,
+    .weather h2 {
+        background-color: var(--primary);
+        color: white;
+        margin: 0;
+        border: none;
+        text-align: center;
     }
 
     /* Emoji instead of SVG */
