@@ -1,0 +1,129 @@
+/* =========================
+   CSS VARIABLES
+========================= */
+:root {
+    --primary: #c1121f;
+    --secondary: #fcbf49;
+    --accent: #003049;
+    --light: #fdf0d5;
+    --gray: #eae2b7;
+    --text: #222;
+}
+/* =========================
+   GLOBAL STYLES
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background: var(--light);
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 8px solid var(--secondary);
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* DATA */
+.data {
+    background: var(--gray);
+}
+
+.data h2 {
+    margin-bottom: 1rem;
+}
+
+.data p {
+    margin: 0.4rem 0;
+}
+
+/* WEATHER */
+.weather h2 {
+    margin-bottom: 1rem;
+}
+
+.weather p {
+    margin: 0.4rem 0;
+}
+
+/* Weather Icon (mobile) */
+.weather-icon {
+    width: 70px;
+    margin: 0.5rem 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+/* =========================
+   MEDIA QUERY (DESKTOP)
+========================= */
+@media (min-width: 768px) {
+
+    main {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* Layout side-by-side */
+    .data,
+    .weather {
+        display: inline-block;
+        width: 48%;
+        vertical-align: top;
+    }
+
+    /* Emoji instead of SVG */
+    .weather h2::after {
+        content: " ⛅";
+    }
+
+    .weather-icon {
+        display: none;
+    }
+}

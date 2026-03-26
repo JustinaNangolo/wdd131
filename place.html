@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta> name="description" content="A collection of beautiful places from around the world">
+    <meta name="description" content="A collection of beautiful places from around the world">
     <meta name="author" content="Justina Nangolo">
     <title>Namibia</title>
     <link rel="stylesheet" href="styles/place.css">
@@ -13,37 +13,38 @@
 <body>
     <header>
         <h1>Namibia</h1>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                
-            </ul>
-        </nav>
     </header>
+
     <main>
-        <h2>Home</h2>
-        <div class="gallery">
-            <figure>
-                <img src="images/namibia.jpg" alt="Namibia Landscape">
-                <figcaption>Namibia Landscape</figcaption>
-            </figure>
-            <figure>
-                <img src="images/namibia.jpg" alt="Namibia Desert">
-                <figcaption>Namibia Desert</figcaption>
-            </figure>
-            <figure>
-                <img src="images/namibia.jpg" alt="Namibia Wildlife">
-                <figcaption>Namibia Wildlife</figcaption>
-            </figure>
-            <figure>
-                <img src="images/namibia.jpg" alt="Namibia Coastline">
-                <figcaption>Namibia Coastline</figcaption>
-            </figure>
-            <figure>
-                <img src="images/namibia.jpg" alt="Namibia Sunset">
-                <figcaption>Namibia Sunset</figcaption>
-            </figure>
-        </div>
+        <section class=" hero">
+            <picture>
+                <source srcset="images/hero-large.webp" type="image/webp">
+                <img src="images/hero-large.jpg" alt="Namibia Landscape">
+            </picture>
+
+        </section>
+
+        <section class="data">
+            <h2>Data</h2>
+            <p><strong>Area:</strong> 825,615 km²</p>
+            <p><strong>Population:</strong> ~2.5 million</p>
+            <p><strong>Capital:</strong> Windhoek</p>
+            <p><strong>Language:</strong> English</p>
+            <p><strong>currency:</strong> Namibian Dollar (NAD)</p>
+            <p><strong>Time Zone:</strong> UTC+2</p>
+            <p><strong>Calling Code:</strong> +264</p>
+            <p><strong>Internet TLD:</strong> .na</p>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <img src="images/weather.svg" alt="Weather Icon" class="weather-icon">
+            <p><strong>Temperature:</strong> 25°C</p>
+            <p><strong>Conditions:</strong> Sunny</p>
+            <p><strong>Wind:</strong> 10 km/h</p>
+            <p><strong>Wind chill:</strong> 17.6°C</p>
+
+        </section>
 
     </main>
 
