@@ -23,6 +23,9 @@ body {
     color: var(--text);
     background: var(--light);
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* =========================
@@ -38,6 +41,7 @@ header {
 
 header h1 {
     font-size: 1.8rem;
+    text-transform: uppercase;
 }
 
 /* =========================
@@ -45,15 +49,16 @@ header h1 {
 ========================= */
 .hero img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+    object-fit: cover;
 }
 
 /* =========================
    SECTIONS
 ========================= */
 section {
-    padding: 1.5rem;
+    padding: 0;
     text-align: center;
 }
 
@@ -87,70 +92,68 @@ section {
 
 /* Weather Icon (mobile) */
 .weather-icon {
-    width: 100px;
+    width: 10px;
     margin: 0 auto;
     height: auto;
     padding: 0.5rem 1rem;
     display: block;
 }
 
-/* =========================
-   FOOTER
-========================= */
+
 footer {
     background: var(--primary);
     color: white;
     text-align: center;
     padding: 1rem;
-    margin-top: 1rem;
+
 }
 
 footer p {
     margin: 0.3rem 0;
 }
 
-/* =========================
-   MEDIA QUERY (DESKTOP)
-========================= */
-@media (min-width: 768px) {
-
-    main {
-        max-width: 900px;
+@media (min-width: 768px)  {
+ 
+    .hero {
+        max-width: 1000px;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 2%;
-    }
-    .hero {
-        width: 100%;
+        justify-content: center;
+        gap: 0;
+        height: 800px;
+
     }
 
-    /* Layout side-by-side */
     .data,
     .weather {
-        display: inline-block;
-        width: 48%;
-        vertical-align: top;
-        background: var(--gray);
-        border: none;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.85);
+        width: 200px;
+        padding: 0;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        right: 80px;
+        height: auto;
     }
 
+    .data {
+        top: 80px;
+        left: 30px;
+        /* Top Right position */
+    }
+
+    .weather {
+        bottom: 30px;
+        right: 30px;
+    }
+
+    /* Ensure the H2 still looks like a red bar on top of the card */
     .data h2,
     .weather h2 {
         background-color: var(--primary);
         color: white;
         margin: 0;
-        border: none;
-        text-align: center;
-    }
-
-    /* Emoji instead of SVG */
-    .weather h2::after {
-        content: " ⛅";
-    }
-
-    .weather-icon {
-        display: none;
+        padding: 10px;
     }
 }
