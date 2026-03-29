@@ -2,12 +2,12 @@
    CSS VARIABLES
 ========================= */
 :root {
-    --primary: #58b16d;
+    --primary: #2d5a3a;
     --secondary: #fcbf49;
     --accent: #003049;
     --light: #fdf0d5;
     --gray: #eae2b7;
-    --text: #222;
+    --text: #1a1a1a;
 }
 /* =========================
    GLOBAL STYLES
@@ -85,6 +85,11 @@ section {
 
 
 
+.weather h2::after {
+    content: "";
+}
+
+
 .weather p {
     margin: 0.4rem 0;
     padding: 0.5rem 1rem;
@@ -155,5 +160,14 @@ footer p {
         color: white;
         margin: 0;
         padding: 10px;
+    }
+    .weather-icon {
+        display: none;
+            /* Hide SVG on Desktop */
+    }
+    
+    .weather h2::after {
+        content: " ⛅";
+            margin-left: 10px;
     }
 }
