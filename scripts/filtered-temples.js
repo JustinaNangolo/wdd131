@@ -75,7 +75,35 @@ const temples = [
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
+
+    
     // Add more temple objects here...
 ];
+
+createTemplateCards(temples);
+function createTemplateCards(temples) {
+    temples.forEach(temple => {
+        let card = document.createElement("div");
+        let name = document.createElement("h3");
+        let location = document.createElement("p");
+        let dedicated = document.createElement("p");
+        let area = document.createElement("p");
+        let image = document.createElement("img");
+
+        image.textContent = temple.templeName;
+        location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+        dedicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+        area.innerHTML = `<span class="label">Area:</span> ${temple.area} sq ft`;
+        image.src = temple.imageUrl;
+        image.alt = `${temple.templeName} Temple`;
+
+        card.appendChild(name);
+        card.appendChild(location);
+        card.appendChild(dedicated);
+        card.appendChild(area);
+        card.appendChild(image);
+
+        document.querySelector(".gallery").appendChild(card);
+    }
 
 
