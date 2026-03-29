@@ -75,6 +75,15 @@ const temples = [
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
+    {
+        templeName: "Sapporo Japan",
+        location: "Sapporo, Japan",
+        dedicated: "2016, June, 5", 
+        area: 107639,
+        imageUrl:
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sapporo-japan/400x250/sapporo-japan-temple-exterior-2.jpg"    
+        
+    }
 
     
     // Add more temple objects here...
