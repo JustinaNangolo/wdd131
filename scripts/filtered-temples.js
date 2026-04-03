@@ -127,7 +127,7 @@ createTempleCards(temples);
 
 function createTempleCards(temples) {
     const gallery = document.querySelector(".gallery");
-    gallery.innerHTML = ""; // Clear existing content
+    gallery.innerHTML = ""; 
 
     temples.forEach(temple => {
         let card = document.createElement("section");
