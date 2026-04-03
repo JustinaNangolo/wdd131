@@ -86,7 +86,7 @@ const temples = [
         dedicated: "2016, June, 5", 
         area: 107639,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sapporo-japan/400x250/sapporo-japan-temple-exterior-2.jpg"    
+            "https://churchofjesuschristtemples.org/assets/img/temples/sapporo-japan-temple/sapporo-japan-temple-3374-main.jpg"
         
     },
 
@@ -146,7 +146,7 @@ function createTempleCards(temples) {
         card.appendChild(area);
         card.appendChild(image);
 
-        document.querySelector(".gallery").appendChild(card);
+        document.querySelector(".temple-cards").appendChild(card);
     });
 }
 
