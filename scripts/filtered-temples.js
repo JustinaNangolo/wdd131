@@ -143,7 +143,7 @@ function createTempleCards(temples) {
         dedicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
 
         let area = document.createElement("p");
-        area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
+        area.innerHTML = `<span class="label">Area:</span> ${temple.area} sq ft`;
 
         let image = document.createElement("img");
         image.setAttribute("src", temple.imageUrl);
