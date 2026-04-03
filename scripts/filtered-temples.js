@@ -18,6 +18,11 @@ menuBtn.addEventListener("click", () => {
         menuBtn.textContent = "☰";
     }
 });
+
+
+
+
+
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -83,7 +88,7 @@ const temples = [
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sapporo-japan/400x250/sapporo-japan-temple-exterior-2.jpg"    
         
-    }
+    },
 
     {
         templeName: "Bangkok Thailand",
@@ -92,7 +97,7 @@ const temples = [
         area: 48525,
         imageUrl:
             "https://churchofjesuschristtemples.org/assets/img/temples/bangkok-thailand-temple/bangkok-thailand-temple-40055.jpg"
-    }
+    },
 
     {
         templeName: "Mexico City Benemerito Mexico",
@@ -101,7 +106,7 @@ const temples = [
         area: 29000,
         imageUrl:
             "https://churchofjesuschristtemples.org/assets/img/temples/mexico-city-benemerito-mexico-temple/mexico-city-benemerito-mexico-temple-56024-main.jpg"
-    }
+    },
 
     {
         templeName: "Cape Town South Africa",
@@ -115,10 +120,11 @@ const temples = [
     // Add more temple objects here...
 ];
 
-createTemplateCards(temples);
-function createTemplateCards(temples) {
+createTempleCards(temples);
+
+function createTempleCards(temples) {
     temples.forEach(temple => {
-        let card = document.createElement("div");
+        let card = document.createElement("section");
         let name = document.createElement("h3");
         let location = document.createElement("p");
         let dedicated = document.createElement("p");
@@ -128,9 +134,11 @@ function createTemplateCards(temples) {
         image.textContent = temple.templeName;
         location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
         dedicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
-        area.innerHTML = `<span class="label">Area:</span> ${temple.area} sq ft`;
-        image.src = temple.imageUrl;
-        image.alt = `${temple.templeName} Temple`;
+        area.innerHTML = `<span class="label"> Size:</span> ${temple.area} sq ft`;
+
+        image.setAttribute("src", temple.imageUrl);
+        image.setAttribute("alt", `${temple.templeName} Temple`);
+        image.setAttribute("loading", "lazy");
 
         card.appendChild(name);
         card.appendChild(location);
@@ -139,6 +147,7 @@ function createTemplateCards(temples) {
         card.appendChild(image);
 
         document.querySelector(".gallery").appendChild(card);
-    }
+    });
+}
 
 
