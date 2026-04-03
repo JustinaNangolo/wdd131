@@ -85,6 +85,32 @@ const temples = [
         
     }
 
+    {
+        templeName: "Bangkok Thailand",
+        location: "Bangkok, Thailand",
+        dedicated: "2023, October, 22",   
+        area: 48525,
+        imageUrl:
+            "https://churchofjesuschristtemples.org/assets/img/temples/bangkok-thailand-temple/bangkok-thailand-temple-40055.jpg"
+    }
+
+    {
+        templeName: "Mexico City Benemerito Mexico",
+        location: "Mexico City, Mexico",
+        dedicated: "2022, October, 31",  
+        area: 29000,
+        imageUrl:
+            "https://churchofjesuschristtemples.org/assets/img/temples/mexico-city-benemerito-mexico-temple/mexico-city-benemerito-mexico-temple-56024-main.jpg"
+    }
+
+    {
+        templeName: "Cape Town South Africa",
+        location: "Cape Town, South Africa",
+        dedicated: "2025, October, 25",  
+        area: 9500,
+        imageUrl:
+            "https://churchofjesuschristtemples.org/assets/img/temples/cape-town-south-africa-temple/cape-town-south-africa-temple-64609-main.jpg"
+    }
     
     // Add more temple objects here...
 ];
