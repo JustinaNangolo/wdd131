@@ -159,6 +159,8 @@ function createTempleCards(temples) {
         card.appendChild(area);
         card.appendChild(image);
 
+       
+
         document.querySelector(".gallery").appendChild(card);
     });
 }
