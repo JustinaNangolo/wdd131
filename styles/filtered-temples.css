@@ -75,12 +75,14 @@ main h2 {
 }
 
 
-.temple-cards {
+.gallery {
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr;
     gap: 1px;
     max-width: 900px;
     margin: 0 auto;
+    border-radius: 4px;
 }
 
 

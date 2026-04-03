@@ -11,15 +11,8 @@ const navMenu = document.getElementById("navMenu");
 
 menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("open");
-
-    if (navMenu.classList.contains("open")) {
-        menuBtn.textContent = "✖";
-    } else {
-        menuBtn.textContent = "☰";
-    }
+    menuBtn.textContent = navMenu.classList.contains("open") ? "✖" : "☰";
 });
-
-
 
 
 
@@ -115,6 +108,15 @@ const temples = [
         area: 9500,
         imageUrl:
             "https://churchofjesuschristtemples.org/assets/img/temples/cape-town-south-africa-temple/cape-town-south-africa-temple-64609-main.jpg"
+    },
+
+    {
+        templeName: "Bern Switzerland Temple",
+        location: "Bern, Switzerland",
+        dedicated: "1955, September, 9",
+        area: 35546,
+        imageUrl:
+            "https://churchofjesuschristtemples.org/assets/img/temples/bern-switzerland-temple/bern-switzerland-temple-54641-main.jpg"
     }
     
     // Add more temple objects here...
@@ -122,23 +124,34 @@ const temples = [
 
 createTempleCards(temples);
 
+
 function createTempleCards(temples) {
+    const gallery = document.querySelector(".gallery");
+    gallery.innerHTML = ""; // Clear existing content
+
     temples.forEach(temple => {
         let card = document.createElement("section");
+        card.classList.add("temple-card");
+
         let name = document.createElement("h3");
+        name.textContent = temple.templeName;
+
         let location = document.createElement("p");
-        let dedicated = document.createElement("p");
-        let area = document.createElement("p");
-        let image = document.createElement("img");
-
-        image.textContent = temple.templeName;
         location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
-        dedicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
-        area.innerHTML = `<span class="label"> Size:</span> ${temple.area} sq ft`;
 
+        let dedicated = document.createElement("p");
+        dedicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+
+        let area = document.createElement("p");
+        area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
+
+        let image = document.createElement("img");
         image.setAttribute("src", temple.imageUrl);
         image.setAttribute("alt", `${temple.templeName} Temple`);
         image.setAttribute("loading", "lazy");
+        image.setAttribute("width", "400");
+        image.setAttribute("height", "250");
+
 
         card.appendChild(name);
         card.appendChild(location);
@@ -146,8 +159,35 @@ function createTempleCards(temples) {
         card.appendChild(area);
         card.appendChild(image);
 
-        document.querySelector(".temple-cards").appendChild(card);
+        document.querySelector(".gallery").appendChild(card);
     });
 }
+
+
+// Navigation Filter Event Listeners
+const navLinks = document.querySelectorAll("#navMenu a");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const filter = e.target.textContent;
+        document.querySelector("main h2").textContent = filter;
+
+        let filteredTemples = temples;
+
+        if (filter === "Old") {
+            filteredTemples = temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900);
+        } else if (filter === "New") {
+            filteredTemples = temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000);
+        } else if (filter === "Large") {
+            filteredTemples = temples.filter(t => t.area > 90000);
+        } else if (filter === "Small") {
+            filteredTemples = temples.filter(t => t.area < 10000);
+        }
+
+        createTempleCards(filteredTemples);
+    });
+});
+
 
 
