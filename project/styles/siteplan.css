@@ -6,9 +6,11 @@
     --bg-color: #ffffff;
 }
 
-
+* {
+    box-sizing: border-box;
+}
 body {
-    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -29,6 +31,8 @@ h1,
 h2,
 h3 {
     color: var(--primary-color);
+    margin: 0;
+    text-align: center;
 }
 
 
@@ -55,7 +59,13 @@ section {
     border: 1px solid #000000;
 }
 
+.primary-swatch {
+    background-color: var(--primary-color);
+}
 
+.accent-swatch {
+    background-color: var(--accent-color);
+}
 
 .wireframe-container {
     display: flex;
