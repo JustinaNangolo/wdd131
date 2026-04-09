@@ -1,3 +1,16 @@
+
+// 1. Set the current year
+const currentYear = new Date().getFullYear();
+const yearElement = document.getElementById("currentyear");
+if (yearElement) {
+    yearElement.textContent = currentYear;
+}
+
+const lastModifiedElement = document.getElementById("lastModified");
+if (lastModifiedElement) {
+    lastModifiedElement.textContent = document.lastModified;
+}
+
 const products = [
     { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
     { id: "fc-2050", name: "power laces", averagerating: 4.7 },
