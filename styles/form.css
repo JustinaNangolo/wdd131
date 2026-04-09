@@ -6,6 +6,7 @@
     --white: #ffffff;
     --border-color: #ccc;
     --accent-color: #5e35b1;
+    --asterisk-color: #d32f2f;
 }
 
 * {
@@ -92,6 +93,18 @@ legend {
     gap: 1px;
     margin-top: 0.5rem;
 }
+
+
+/* Add asterisks to required fields */
+label[for="productName"]::after,
+label[for="installDate"]::after,
+label[for="rating"]::after,
+.rating-legend::after {
+    content: " *";
+    color: var(--asterisk-color);
+    font-weight: bold;
+}
+
 
 .rating-container label {
     display: flex;
