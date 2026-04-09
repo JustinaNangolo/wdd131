@@ -3,7 +3,8 @@
     --primary-color: #003366;
     --accent-color: #E6B800;
     --text-color: #222222;
-    --bg-color: #ffffff;
+    --bg-color: #e9ecef;
+    --card-border:#bbbbbb;
 }
 
 * {
@@ -43,7 +44,7 @@ header h1 {
 section {
     margin: 20px 0;
     padding: 15px;
-    border: 1px solid var(--bg-color);
+    border: 1px solid var(--card-border);
 }
 
 
