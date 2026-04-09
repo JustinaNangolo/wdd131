@@ -1,0 +1,14 @@
+<main>
+    <h2>Thank you for your review!</h2>
+    <p>Total reviews submitted: <span id="reviewCount"></span></p>
+</main>
+
+<script>
+    // Logic for review.html
+    document.addEventListener("DOMContentLoaded", () => {
+        let count = localStorage.getItem("reviewCount") || 0;
+        count++;
+        localStorage.setItem("reviewCount", count);
+        document.getElementById("reviewCount").textContent = count;
+    });
+</script>
