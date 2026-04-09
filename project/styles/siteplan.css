@@ -39,7 +39,7 @@ header h1 {
 section {
     margin: 20px 0;
     padding: 15px;
-    border: 1px solid #dddddd;
+    border: 1px solid var(--bg-color);
 }
 
 
@@ -67,12 +67,10 @@ section {
 /* Individual wireframe wrapper */
 .wireframe-item {
     flex: 1 1 400px;
-    /* Grow, shrink, and basis (minimum width before wrapping) */
     max-width: 100%;
     text-align: center;
 }
 
-/* Ensure images fit within their containers */
 .wireframe-item img {
     width: 100%;
     height: auto;
