@@ -5,13 +5,14 @@
     --text-color: #222222;
     --bg-color: #e9ecef;
     --card-border:#bbbbbb;
+    --primary-font: 'Open Sans', sans-serif;
 }
 
 * {
     box-sizing: border-box;
 }
 body {
-    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-family: var(--primary-font);
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
