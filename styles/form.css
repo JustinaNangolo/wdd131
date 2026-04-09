@@ -1,8 +1,6 @@
 :root {
     --primary-color: #311b92;
-    /* Dark Purple */
     --secondary-color: #f3e5f5;
-    /* Light Purple Background */
     --text-color: #333;
     --white: #ffffff;
     --border-color: #ccc;
@@ -17,8 +15,7 @@
 
 body {
     font-family: 'Open Sans', Arial, sans-serif;
-    background-color: #e0e0e0;
-    /* Light gray page background */
+    background-color: var(--white);
     color: var(--text-color);
     line-height: 1.6;
 }
