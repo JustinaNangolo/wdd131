@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Helvetica, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
