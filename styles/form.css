@@ -96,7 +96,7 @@ legend {
 }
 
 
-/* Add asterisks to required fields */
+
 label[for="productName"]::after,
 label[for="installDate"]::after,
 label[for="rating"]::after,
