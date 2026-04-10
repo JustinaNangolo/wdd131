@@ -2,11 +2,12 @@
 :root {
     --primary-color: #311b92;
     --secondary-color: #f3e5f5;
-    --text-color: #333;
+    --text-color: #333333;
     --white: #ffffff;
-    --border-color: #ccc;
+    --border-color: #cccccc;
     --accent-color: #5e35b1;
     --asterisk-color: #d32f2f;
+    --shadow-colour: #0000001a;
 }
 
 * {
@@ -48,7 +49,7 @@ form {
     padding: 1.5rem;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px var(--shadow-colour);
 }
 
 /* 4. FORM ELEMENTS */
