@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign up for German Bridge courses and join our learning community.">
+    <title>Contact Us | German Bridge</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)">
+</head>
+
+<body>
+    <header>
+        <h1>Register Now</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html" class="active">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form method="get" action="thanks.html" class="wf1">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label>First Name* <input type="text" name="fname" required></label>
+                <label>Email* <input type="email" name="email" placeholder="example@mail.com" required></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Course Interest</legend>
+                <label>Current German Level
+                    <select name="level">
+                        <option value="" selected disabled>Select Level...</option>
+                        <option value="a1">A1 - Beginner</option>
+                        <option value="a2">A2 - Elementary</option>
+                        <option value="b1">B1 - Intermediate</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Community Goals</legend>
+                <label>What are you looking for?
+                    <textarea name="goals" rows="4" placeholder="e.g. A study buddy for speaking practice"></textarea>
+                </label>
+            </fieldset>
+
+            <input type="submit" value="Join German Bridge">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> German Bridge</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

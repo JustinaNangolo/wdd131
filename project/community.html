@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connect with other German language learners in the German Bridge community.">
+    <title>Community | German Bridge</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)">
+    <script src="scripts/community.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>German Bridge Community</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="community.html" class="active">Community</a></li>
+                <li><a href="contact.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Find a Study Buddy</h2>
+            <p>Post a message below to connect with people studying at your level.</p>
+        </section>
+
+        <section class="post-form">
+            <form id="buddy-form">
+                <label for="username">Your Name:</label>
+                <input type="text" id="username" required>
+
+                <label for="userlevel">Your Level:</label>
+                <select id="userlevel">
+                    <option value="A1">A1</option>
+                    <option value="A2">A2</option>
+                    <option value="B1">B1</option>
+                    <option value="B2">B2</option>
+                </select>
+
+                <label for="message">Message:</label>
+                <textarea id="message" rows="3"
+                    placeholder="e.g. Looking for someone to practice speaking with on weekends!" required></textarea>
+
+                <button type="submit" id="post-btn">Post Message</button>
+            </form>
+        </section>
+
+        <section id="board-section">
+            <h2>Community Board</h2>
+            <div id="visitor-board" class="grid-container">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> German Bridge | <a href="references.html">References</a></p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

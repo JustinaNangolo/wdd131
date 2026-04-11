@@ -1,0 +1,20 @@
+/* Media Query for Larger Screens */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        /* Horizontal nav for desktop */
+        justify-content: center;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns like your sketch */
+    }
+
+    /* If you want 3 columns for larger screens */
+    @media (min-width: 1024px) {
+        .grid-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
