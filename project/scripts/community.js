@@ -1,19 +1,19 @@
-// 1. DOM Interaction: Selecting elements
+
 const form = document.querySelector("#buddy-form");
 const board = document.querySelector("#visitor-board");
 
-// 2. Initialize the board from localStorage on load
+
 let posts = JSON.parse(localStorage.getItem("communityPosts")) || [];
 
 function displayPosts() {
-    board.innerHTML = ""; // Clear board before re-rendering
+    board.innerHTML = ""; 
 
-    // 3. Using Array Methods (forEach)
+    
     posts.forEach((post) => {
         const postCard = document.createElement("div");
         postCard.className = "card";
 
-        // 4. Using Template Literals exclusively for output
+        
         postCard.innerHTML = `
             <h3>${post.name} (${post.level})</h3>
             <p>"${post.msg}"</p>
@@ -23,11 +23,11 @@ function displayPosts() {
     });
 }
 
-// 5. Event Listener & Functionality
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // 6. Creating a JavaScript Object
+  
     const newPost = {
         name: document.querySelector("#username").value,
         level: document.querySelector("#userlevel").value,
@@ -35,11 +35,11 @@ form.addEventListener("submit", (e) => {
         date: new Date().toLocaleDateString()
     };
 
-    // 7. Conditional Branching (preventing empty messages)
+    
     if (newPost.msg.length > 5) {
         posts.push(newPost);
 
-        // 8. Using localStorage to save data
+       
         localStorage.setItem("communityPosts", JSON.stringify(posts));
 
         displayPosts();
@@ -50,4 +50,58 @@ form.addEventListener("submit", (e) => {
 });
 
 // Initial display call
-displayPosts();
+function displayPosts() {
+    const board = document.querySelector("#visitor-board");
+    board.innerHTML = "";
+
+    posts.forEach((post, index) => {
+        const postCard = document.createElement("div");
+        postCard.className = "card";
+
+        postCard.innerHTML = `
+            <h3>${post.name} (${post.level})</h3>
+            <p>"${post.msg}"</p>
+            
+            <div class="post-actions">
+                <button onclick="toggleReply(${index})" class="action-btn">💬 Reply</button>
+            </div>
+
+            <div id="reply-box-${index}" class="reply-container" style="display: none;">
+                <textarea id="reply-text-${index}" placeholder="Write your reply..."></textarea>
+                <button onclick="submitReply(${index})" class="btn-primary">Send</button>
+            </div>
+
+            <div id="replies-list-${index}" class="replies-display">
+                ${(post.replies || []).map(r => `<p class="reply-item"><strong>Admin:</strong> ${r}</p>`).join('')}
+            </div>
+
+            <span class="post-date">Posted on: ${post.date}</span>
+        `;
+        board.appendChild(postCard);
+    });
+}
+
+
+
+function toggleReply(index) {
+    const box = document.querySelector(`#reply-box-${index}`);
+    box.style.display = (box.style.display === "none") ? "block" : "none";
+}
+
+function submitReply(index) {
+    const replyInput = document.querySelector(`#reply-text-${index}`);
+    const replyValue = replyInput.value;
+
+    if (replyValue.trim() !== "") {
+        if (!posts[index].replies) {
+            posts[index].replies = [];
+        }
+
+        posts[index].replies.push(replyValue);
+
+        localStorage.setItem("communityPosts", JSON.stringify(posts));
+
+        
+        displayPosts();
+    }
+}
