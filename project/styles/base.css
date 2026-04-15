@@ -78,6 +78,51 @@ section {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* --- 7. Dynamic Course Card Styling --- */
+.card h3 {
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+.card p strong {
+    color: var(--primary-color);
+}
+
+.topics h4 {
+    margin: 15px 0 5px 0;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.topics ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+.topics li {
+    margin-bottom: 3px;
+}
+
+/* Favorites Section Styling */
+#favorites {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 3rem;
+}
+
+#favorites h2 {
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+#fav-list {
+    list-style: square;
+}
+
 /* --- 5. Form Styling (Usability) --- */
 form {
     display: flex;
