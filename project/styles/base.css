@@ -65,7 +65,6 @@ section {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    /* 1 column on mobile */
     gap: 20px;
 }
 
@@ -236,7 +235,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    background-color: rgba(0, 51, 102, 0.5);
+    background-color: var(--primary-color)
 }
 
 .hero-action-container {
@@ -268,7 +267,7 @@ footer {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--bg-color);
 }
 
 .hero-subtext {
